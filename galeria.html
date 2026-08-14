@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galería | Córdoba Racing Team</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { black: '#111111', dark: '#1c1c1e', muted: '#6e6e73', light: '#f5f5f7', border: '#e5e5ea', green: '#1a8a44' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['Space Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[#fafafa] text-brand-dark font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fafafa]/90 backdrop-blur-md border-b border-brand-border transition-all">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="logo-transparente.png" alt="Logo Córdoba Racing Team" class="h-10 w-auto group-hover:opacity-80 transition-opacity">
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-medium text-brand-muted">
+        <a href="proyecto.html" class="hover:text-brand-green transition-colors">Proyecto</a>
+        <a href="index.html#monoplaza" class="hover:text-brand-green transition-colors">Monoplaza</a>
+        <a href="galeria.html" class="text-brand-green transition-colors">Galería</a>
+        <a href="news.html" class="hover:text-brand-green transition-colors">Noticias</a>
+      </nav>
+      <div class="hidden md:flex items-center">
+        <a href="join.html" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-brand-green text-brand-green text-xs font-bold uppercase tracking-wider hover:bg-brand-green hover:text-white transition-all duration-300">
+          <span>Unirse al Equipo</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-32 pb-24 flex-grow">
+    
+    <!-- CABECERA GALERÍA -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12 mb-16">
+      <span class="text-xs uppercase tracking-[0.2em] font-mono text-brand-green block mb-4 font-bold">Archivo Visual</span>
+      <h1 class="text-4xl sm:text-5xl font-light tracking-tight text-brand-black leading-[1.15] mb-4">
+        Galería de <span class="font-serif italic text-brand-green">pista y taller</span>
+      </h1>
+      <p class="text-sm sm:text-base text-brand-muted font-light max-w-2xl">
+        Un recorrido visual por el desarrollo de nuestro monoplaza, los procesos de fabricación en el taller y las jornadas de pruebas y competición.
+      </p>
+    </section>
+
+    <!-- CUADRÍCULA DE FOTOS -->
+    <section class="max-w-7xl mx-auto px-6 lg:px-12">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- FOTO 1 -->
+        <div class="group bg-white border border-brand-border rounded-2xl overflow-hidden shadow-sm">
+          <div class="aspect-[4/3] bg-brand-light overflow-hidden">
+            <img src="img-galeria/nombre-foto-1.jpg" alt="Test en circuito" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-green block mb-1">Circuit Test</span>
+            <h3 class="text-sm font-medium text-brand-black">Puesta a punto y validación dinámica</h3>
+          </div>
+        </div>
+
+        <!-- FOTO 2 -->
+        <div class="group bg-white border border-brand-border rounded-2xl overflow-hidden shadow-sm">
+          <div class="aspect-[4/3] bg-brand-light overflow-hidden">
+            <img src="img-galeria/nombre-foto-2.jpg" alt="Taller CRT" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-green block mb-1">Taller</span>
+            <h3 class="text-sm font-medium text-brand-black">Ensamblaje del chasis tubular</h3>
+          </div>
+        </div>
+
+        <!-- FOTO 3 -->
+        <div class="group bg-white border border-brand-border rounded-2xl overflow-hidden shadow-sm">
+          <div class="aspect-[4/3] bg-brand-light overflow-hidden">
+            <img src="img-galeria/nombre-foto-3.jpg" alt="Simulaciones CFD" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="p-5">
+            <span class="text-[10px] font-mono uppercase tracking-widest text-brand-green block mb-1">Ingeniería</span>
+            <h3 class="text-sm font-medium text-brand-black">Análisis de aerodinámica y CFD</h3>
+          </div>
+        </div>
+
+        <!-- Si tienes más fotos, solo copia y pega otro bloque como este cambiando el nombre del archivo -->
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-brand-black text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between">
+      <img src="logo-footer.png" alt="Logo CRT" class="h-10 w-auto mb-4 sm:mb-0 rounded">
+      <p class="text-[11px] font-mono text-gray-500">© 2026 Córdoba Racing Team. Semper in novum.</p>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
