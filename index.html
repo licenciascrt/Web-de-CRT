@@ -66,18 +66,26 @@
   </header>
 
   <main class="pt-20">
-    <!-- HERO SECTION CON BOTÓN VERDE -->
-    <section class="max-w-7xl mx-auto px-6 lg:px-12 pt-16 pb-24 sm:pt-24 sm:pb-32">
-      <div class="max-w-4xl">
-        <p class="text-xs uppercase tracking-[0.25em] text-brand-green font-mono mb-6 font-bold">
+    <!-- HERO SECTION CON FONDO DE IMAGEN Y EFECTO CRISTAL -->
+    <!-- Sustituye "ruta_de_tu_foto.jpg" por el nombre de la foto de tu equipo cuando la subas a GitHub -->
+    <section class="relative min-h-[90vh] flex items-center justify-center px-6 lg:px-12 py-24 bg-cover bg-center bg-no-repeat" style="background-image: url('ruta_de_tu_foto.jpg');">
+      
+      <!-- CAPA DE OSCURECIMIENTO (Opcional, ayuda a dar contraste general a la foto) -->
+      <div class="absolute inset-0 bg-black/30"></div>
+
+      <!-- RECUADRO TRANSLÚCIDO (Glassmorphism) -->
+      <div class="relative z-10 max-w-4xl bg-white/70 backdrop-blur-md border border-white/40 p-8 md:p-12 rounded-3xl shadow-2xl text-center flex flex-col items-center">
+        
+        <p class="text-xs uppercase tracking-[0.25em] text-brand-green font-mono mb-6 font-bold bg-white/80 px-4 py-1.5 rounded-full inline-block">
           Formula Student Combustion · UCO
         </p>
-        <h1 class="text-4xl sm:text-6xl lg:text-7xl font-light tracking-tight text-brand-black leading-[1.08] mb-8">
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-light tracking-tight text-brand-black leading-[1.1] mb-6">
           Ingeniería de precisión y la búsqueda constante del <span class="font-serif italic font-normal text-brand-green">rendimiento puro</span>.
         </h1>
+        
         <div class="flex flex-col sm:flex-row sm:items-center gap-6 pt-4">
-          <!-- Botón principal en verde CRT -->
-          <a href="join.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-green text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-greenHover transition-all duration-300 shadow-lg shadow-brand-green/20">
+          <a href="join.html" class="inline-flex items-center justify-center gap-2 px-8 py-4 rounded-full bg-brand-green text-white text-xs font-bold uppercase tracking-wider hover:bg-brand-greenHover transition-all duration-300 shadow-lg shadow-brand-green/30">
             <span>Convocatoria de Admisión</span>
             <i data-lucide="arrow-right" class="w-4 h-4"></i>
           </a>
