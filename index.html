@@ -3,24 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Córdoba Racing Team | Formula Student UCO</title>
-  <meta name="description" content="Equipo de Formula Student de la Universidad de Córdoba. Innovación, ingeniería y competición.">
+  <title>Córdoba Racing Team | Formula Student Combustion UCO</title>
+  <meta name="description" content="Equipo de Formula Student Combustion de la Universidad de Córdoba. Innovación, ingeniería y competición.">
   
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      darkMode: 'class',
       theme: {
         extend: {
           colors: {
             crt: {
-              black: '#0a0a0d',
-              card: '#121217',
-              border: '#1f1f28',
-              green: '#00e676',
-              greenDark: '#00b359',
-              accent: '#10b981'
+              green: '#00a859',       // Verde de carreras CRT vibrante
+              greenLight: '#e6f7ef',  // Fondo verde muy suave
+              greenDark: '#007a41',
+              dark: '#111827',        // Texto y acentos oscuros elegantes
+              grayBg: '#f8fafc',      // Fondo secundario limpio
+              border: '#e2e8f0'
             }
           },
           fontFamily: {
@@ -35,148 +34,304 @@
   <!-- Fuentes e Iconos -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
 
   <style>
-    /* Estilos personalizados y brillos de competición */
-    .glow-green {
-      box-shadow: 0 0 35px -5px rgba(0, 230, 118, 0.3);
-    }
-    .text-glow {
-      text-shadow: 0 0 20px rgba(0, 230, 118, 0.4);
-    }
-    .grid-bg {
-      background-image: radial-gradient(rgba(0, 230, 118, 0.12) 1px, transparent 0);
-      background-size: 32px 32px;
+    .grid-pattern {
+      background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+      background-size: 24px 24px;
     }
   </style>
 </head>
 
-<body class="bg-crt-black text-gray-200 font-sans antialiased selection:bg-crt-green selection:text-black min-h-screen flex flex-col justify-between">
+<body class="bg-white text-gray-800 font-sans antialiased selection:bg-crt-green selection:text-white">
 
-  <!-- NAVBAR GLASSMORPHISM -->
-  <header class="fixed top-0 left-0 right-0 z-50 bg-crt-black/80 backdrop-blur-md border-b border-crt-border/60 transition-all duration-300">
+  <!-- NAVBAR LIMPIA Y FLOTANTE -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-md border-b border-crt-border transition-all">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       
       <!-- LOGO -->
       <a href="index.html" class="flex items-center gap-3 group">
-        <div class="w-10 h-10 rounded-lg bg-crt-card border border-crt-border flex items-center justify-center group-hover:border-crt-green transition-colors">
-          <!-- Icono temporal mientras metemos el logo oficial -->
-          <i data-lucide="zap" class="w-5 h-5 text-crt-green"></i>
+        <div class="w-10 h-10 rounded-xl bg-crt-green flex items-center justify-center text-white shadow-md shadow-crt-green/20 group-hover:scale-105 transition-transform">
+          <i data-lucide="gauge" class="w-5 h-5"></i>
         </div>
         <div class="flex flex-col">
-          <span class="text-lg font-black tracking-wider text-white uppercase group-hover:text-crt-green transition-colors">CRT</span>
-          <span class="text-[10px] tracking-widest text-gray-400 font-mono">CORDOBA RACING TEAM</span>
+          <span class="text-xl font-black tracking-wider text-crt-dark uppercase leading-none">CRT</span>
+          <span class="text-[10px] tracking-widest text-gray-500 font-mono font-semibold">CÓRDOBA RACING TEAM</span>
         </div>
       </a>
 
-      <!-- ENLACES DE NAVEGACIÓN (Desktop) -->
-      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-300">
+      <!-- ENLACES DE NAVEGACIÓN -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-semibold text-gray-600">
         <a href="#monoplaza" class="hover:text-crt-green transition-colors">Monoplaza</a>
+        <a href="#galeria" class="hover:text-crt-green transition-colors">Galería</a>
         <a href="#equipo" class="hover:text-crt-green transition-colors">Equipo</a>
         <a href="#noticias" class="hover:text-crt-green transition-colors">Noticias</a>
-        <a href="#sponsors" class="hover:text-crt-green transition-colors">Sponsors</a>
+        <a href="#sponsors" class="hover:text-crt-green transition-colors">Patrocinadores</a>
       </nav>
 
-      <!-- BOTONES DE ACCIÓN -->
+      <!-- BOTÓN PRINCIPAL -->
       <div class="hidden md:flex items-center gap-4">
-        <a href="join.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-crt-green text-black font-semibold text-sm hover:bg-white transition-all transform hover:-translate-y-0.5 shadow-lg shadow-crt-green/20">
+        <a href="join.html" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-crt-green text-white font-semibold text-sm hover:bg-crt-greenDark transition-all shadow-md shadow-crt-green/20 transform hover:-translate-y-0.5">
           <span>Únete al Equipo</span>
           <i data-lucide="arrow-right" class="w-4 h-4"></i>
         </a>
       </div>
 
       <!-- BOTÓN MENÚ MÓVIL -->
-      <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white p-2">
+      <button id="mobile-menu-btn" class="md:hidden text-gray-700 p-2 hover:bg-gray-100 rounded-lg">
         <i data-lucide="menu" class="w-6 h-6"></i>
       </button>
     </div>
   </header>
 
-  <!-- HERO SECTION -->
+  <!-- HERO SECTION CON CLARIDAD -->
   <main class="pt-20">
-    <section class="relative min-h-[90vh] flex items-center justify-center overflow-hidden grid-bg px-4 sm:px-6 lg:px-8 py-20">
+    <section class="relative min-h-[85vh] flex items-center justify-center grid-pattern px-4 sm:px-6 lg:px-8 py-16 overflow-hidden">
       
-      <!-- Efecto de luz ambiental difuminada -->
-      <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-crt-green/15 rounded-full blur-[120px] pointer-events-none"></div>
-
-      <div class="relative max-w-5xl mx-auto text-center z-10 flex flex-col items-center">
+      <div class="max-w-6xl mx-auto text-center z-10 flex flex-col items-center">
         
-        <!-- BADGE DE TEMPORADA -->
-        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-crt-card border border-crt-border mb-8 animate-pulse">
-          <span class="w-2 h-2 rounded-full bg-crt-green"></span>
-          <span class="text-xs font-mono font-semibold tracking-wider text-gray-300 uppercase">Formula Student · Univ. de Córdoba</span>
+        <!-- BADGE -->
+        <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-crt-greenLight border border-crt-green/30 mb-8 shadow-sm">
+          <span class="w-2.5 h-2.5 rounded-full bg-crt-green animate-pulse"></span>
+          <span class="text-xs font-mono font-bold tracking-wider text-crt-greenDark uppercase">
+            Formula Student Combustion · Univ. de Córdoba
+          </span>
         </div>
 
         <!-- TÍTULO PRINCIPAL -->
-        <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-white uppercase mb-6 leading-none">
-          Semper <span class="text-transparent bg-clip-text bg-gradient-to-r from-crt-green to-emerald-400 text-glow">in novum</span>
+        <h1 class="text-4xl sm:text-6xl md:text-7xl font-black tracking-tight text-crt-dark uppercase mb-6 leading-tight">
+          Pasión, Ingeniería y <br class="hidden sm:block">
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-crt-green to-emerald-600">
+            Pura Competición
+          </span>
         </h1>
 
         <!-- SUBTÍTULO -->
-        <p class="max-w-2xl text-base sm:text-lg text-gray-400 mb-10 leading-relaxed">
-          Diseñamos, desarrollamos y competimos con los monoplazas del futuro. Pasión, ingeniería y talento universitario cordobés llevado al asfalto de Europa.
+        <p class="max-w-2xl text-base sm:text-lg text-gray-600 mb-10 leading-relaxed">
+          Diseñamos, mecanizamos y ponemos a punto un monoplaza de carreras de combustión para competir contra las mejores universidades de Europa. 
+          <span class="font-semibold text-crt-dark block sm:inline">"Semper in novum."</span>
         </p>
 
-        <!-- BOTONES CTA -->
-        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto">
-          <a href="join.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-crt-green text-black font-bold text-sm hover:bg-white transition-all transform hover:scale-105 shadow-xl shadow-crt-green/20">
+        <!-- BOTONES DE ACCIÓN -->
+        <div class="flex flex-col sm:flex-row items-center gap-4 w-full sm:w-auto mb-16">
+          <a href="join.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-crt-green text-white font-bold text-sm hover:bg-crt-greenDark transition-all shadow-lg shadow-crt-green/30 transform hover:-translate-y-0.5">
             <i data-lucide="user-plus" class="w-4 h-4"></i>
-            <span>Reclutamiento Abierto</span>
+            <span>Formar parte del Equipo</span>
           </a>
-          <a href="#monoplaza" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-crt-card border border-crt-border text-gray-200 font-semibold text-sm hover:border-crt-green/50 hover:bg-crt-border/30 transition-all">
-            <i data-lucide="cpu" class="w-4 h-4"></i>
-            <span>Explorar Monoplaza</span>
+          <a href="#monoplaza" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 px-8 py-3.5 rounded-xl bg-white border border-crt-border text-crt-dark font-semibold text-sm hover:bg-gray-50 hover:border-crt-green transition-all shadow-sm">
+            <i data-lucide="flame" class="w-4 h-4 text-crt-green"></i>
+            <span>Detalles del Motor y Coche</span>
           </a>
         </div>
 
-        <!-- STATS / MÉTRICAS RÁPIDAS -->
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 mt-16 w-full max-w-4xl">
-          <div class="p-4 rounded-xl bg-crt-card/60 border border-crt-border/80 backdrop-blur">
-            <div class="text-2xl sm:text-3xl font-black text-white font-mono text-crt-green">+30</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1">Ingenieros</div>
-          </div>
-          <div class="p-4 rounded-xl bg-crt-card/60 border border-crt-border/80 backdrop-blur">
-            <div class="text-2xl sm:text-3xl font-black text-white font-mono">100%</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1">Diseño Propio</div>
-          </div>
-          <div class="p-4 rounded-xl bg-crt-card/60 border border-crt-border/80 backdrop-blur">
-            <div class="text-2xl sm:text-3xl font-black text-white font-mono">FSE</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1">Categoría Eléctrica</div>
-          </div>
-          <div class="p-4 rounded-xl bg-crt-card/60 border border-crt-border/80 backdrop-blur">
-            <div class="text-2xl sm:text-3xl font-black text-white font-mono">+15</div>
-            <div class="text-xs text-gray-400 uppercase tracking-wider font-semibold mt-1">Sponsors Clave</div>
+        <!-- ESPACIO FOTO PRINCIPAL / HERO PHOTO BANNER -->
+        <div class="w-full max-w-5xl rounded-2xl border border-crt-border bg-white p-3 shadow-xl overflow-hidden group">
+          <div class="relative w-full h-72 sm:h-96 md:h-[480px] rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 overflow-hidden flex items-center justify-center">
+            <!-- Cuando tengamos la foto oficial, sustituimos este fondo por <img src="..." class="w-full h-full object-cover"> -->
+            <div class="text-center p-6 flex flex-col items-center">
+              <div class="w-16 h-16 rounded-full bg-white shadow-md flex items-center justify-center text-crt-green mb-4">
+                <i data-lucide="image" class="w-8 h-8"></i>
+              </div>
+              <p class="text-sm font-semibold text-gray-700">Espacio para Foto / Render Oficial del Monoplaza</p>
+              <p class="text-xs text-gray-500 font-mono mt-1">Listo para meter la foto principal del coche en pista o taller</p>
+            </div>
+            <!-- Etiqueta sobre la foto -->
+            <div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-lg border border-crt-border shadow-sm flex items-center gap-2">
+              <span class="w-2 h-2 rounded-full bg-crt-green"></span>
+              <span class="text-xs font-mono font-bold text-crt-dark">CRT FSC · Temporada Activa</span>
+            </div>
           </div>
         </div>
 
       </div>
     </section>
 
-    <!-- SECCIÓN CONTENEDORA DEL MONOPLAZA INTERACTIVO (AQUÍ ENCAJAREMOS EL SVG) -->
+    <!-- ESPECIFICACIONES TÉCNICAS RÁPIDAS (COMBUSTIÓN) -->
+    <section class="bg-crt-grayBg py-16 border-y border-crt-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+          
+          <div class="bg-white p-6 rounded-2xl border border-crt-border shadow-sm hover:border-crt-green transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-crt-greenLight text-crt-green flex items-center justify-center mb-4">
+              <i data-lucide="flame" class="w-5 h-5"></i>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-crt-dark font-mono">4 Tiempos</div>
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-1">Motor Combustión</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-crt-border shadow-sm hover:border-crt-green transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-crt-greenLight text-crt-green flex items-center justify-center mb-4">
+              <i data-lucide="weight" class="w-5 h-5"></i>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-crt-dark font-mono">&lt; 200 kg</div>
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-1">Peso Optimizado</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-crt-border shadow-sm hover:border-crt-green transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-crt-greenLight text-crt-green flex items-center justify-center mb-4">
+              <i data-lucide="wind" class="w-5 h-5"></i>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-crt-dark font-mono">CFD Aero</div>
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-1">Fibra de Carbono</div>
+          </div>
+
+          <div class="bg-white p-6 rounded-2xl border border-crt-border shadow-sm hover:border-crt-green transition-colors">
+            <div class="w-10 h-10 rounded-xl bg-crt-greenLight text-crt-green flex items-center justify-center mb-4">
+              <i data-lucide="cpu" class="w-5 h-5"></i>
+            </div>
+            <div class="text-2xl sm:text-3xl font-black text-crt-dark font-mono">ECU & Telemetría</div>
+            <div class="text-xs font-bold text-gray-500 uppercase tracking-wider mt-1">Adquisición en Vivo</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN MONOPLAZA INTERACTIVO (PREPARADA PARA VECTOR/SVG) -->
     <section id="monoplaza" class="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <span class="text-xs font-mono font-bold text-crt-green uppercase tracking-widest">Ingeniería en detalle</span>
-        <h2 class="text-3xl sm:text-5xl font-black text-white uppercase tracking-tight mt-2">El Monoplaza CRT</h2>
-        <p class="text-gray-400 mt-4 max-w-xl mx-auto text-sm">Explora la arquitectura de nuestro coche. Selecciona un componente para analizar sus detalles técnicos.</p>
+      <div class="text-center mb-16">
+        <span class="text-xs font-mono font-bold text-crt-green uppercase tracking-widest bg-crt-greenLight px-3 py-1 rounded-full border border-crt-green/20">
+          Ingeniería de Pista
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-black text-crt-dark uppercase tracking-tight mt-3">
+          Análisis del Monoplaza
+        </h2>
+        <p class="text-gray-600 mt-4 max-w-2xl mx-auto text-sm sm:text-base">
+          Desarrollo integral desde cero: chasis multitubular, paquete aerodinámico, admisión/escape a medida y puesta a punto en banco.
+        </p>
       </div>
 
-      <!-- Card contenedor del coche -->
-      <div class="relative rounded-2xl bg-crt-card border border-crt-border p-8 min-h-[400px] flex items-center justify-center overflow-hidden glow-green">
-        <div id="car-svg-container" class="w-full flex items-center justify-center text-center text-gray-500 font-mono text-sm">
-          <!-- Aquí inyectaremos el SVG interactivo -->
-          <div class="flex flex-col items-center gap-3">
-            <i data-lucide="layers" class="w-10 h-10 text-crt-green animate-bounce"></i>
-            <p>Pega aquí el código SVG para habilitar la visualización interactiva por capas</p>
+      <!-- Tarjeta para el coche interactivo / SVG -->
+      <div class="relative rounded-3xl bg-white border border-crt-border p-8 shadow-lg min-h-[420px] flex items-center justify-center overflow-hidden">
+        <div id="car-svg-container" class="w-full flex flex-col items-center justify-center text-center">
+          <div class="w-14 h-14 rounded-2xl bg-crt-greenLight text-crt-green flex items-center justify-center mb-4 animate-bounce">
+            <i data-lucide="layers" class="w-7 h-7"></i>
           </div>
+          <h3 class="text-lg font-bold text-crt-dark">Visor de Componentes del Coche</h3>
+          <p class="text-sm text-gray-500 max-w-md mt-1">Aquí insertaremos el plano vectorial interactivo con los subsistemas (Chasis, Motor, Aerodinámica y Electrónica).</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN GALERÍA DE FOTOS (TALLER Y CARRERAS) -->
+    <section id="galeria" class="py-24 bg-crt-grayBg border-t border-crt-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+          <div>
+            <span class="text-xs font-mono font-bold text-crt-green uppercase tracking-widest bg-crt-greenLight px-3 py-1 rounded-full border border-crt-green/20">
+              Galería
+            </span>
+            <h2 class="text-3xl sm:text-4xl font-black text-crt-dark uppercase tracking-tight mt-2">
+              Taller & Competición
+            </h2>
+          </div>
+          <p class="text-gray-500 text-sm max-w-md mt-3 md:mt-0">
+            El día a día del equipo: diseño, mecanizado, pruebas en circuito y pasión por el automovilismo.
+          </p>
+        </div>
+
+        <!-- GRID DE TARJETAS PARA FOTOS -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          
+          <div class="group bg-white rounded-2xl overflow-hidden border border-crt-border shadow-sm hover:shadow-md transition-all">
+            <div class="h-64 bg-gray-200 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-300">
+              <i data-lucide="camera" class="w-8 h-8"></i>
+            </div>
+            <div class="p-5">
+              <span class="text-xs font-mono font-bold text-crt-green uppercase">Taller UCO</span>
+              <h4 class="font-bold text-crt-dark text-base mt-1">Fabricación y Montaje</h4>
+              <p class="text-xs text-gray-500 mt-1">Ajuste de componentes mecánicos y chasis en nuestras instalaciones.</p>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl overflow-hidden border border-crt-border shadow-sm hover:shadow-md transition-all">
+            <div class="h-64 bg-gray-200 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-300">
+              <i data-lucide="camera" class="w-8 h-8"></i>
+            </div>
+            <div class="p-5">
+              <span class="text-xs font-mono font-bold text-crt-green uppercase">Puesta a Punto</span>
+              <h4 class="font-bold text-crt-dark text-base mt-1">Banco de Potencia & Motor</h4>
+              <p class="text-xs text-gray-500 mt-1">Calibración de la ECU y mapas de inyección para máximo rendimiento.</p>
+            </div>
+          </div>
+
+          <div class="group bg-white rounded-2xl overflow-hidden border border-crt-border shadow-sm hover:shadow-md transition-all">
+            <div class="h-64 bg-gray-200 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-300">
+              <i data-lucide="camera" class="w-8 h-8"></i>
+            </div>
+            <div class="p-5">
+              <span class="text-xs font-mono font-bold text-crt-green uppercase">En Pista</span>
+              <h4 class="font-bold text-crt-dark text-base mt-1">Jornadas de Test</h4>
+              <p class="text-xs text-gray-500 mt-1">Pruebas dinámicas de aceleración, skidpad y resistencia.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SECCIÓN PATROCINADORES -->
+    <section id="sponsors" class="py-20 bg-white border-t border-crt-border">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <span class="text-xs font-mono font-bold text-gray-500 uppercase tracking-widest">Nuestros Aliados</span>
+        <h3 class="text-2xl font-black text-crt-dark uppercase mt-2 mb-10">Empresas e Instituciones que nos apoyan</h3>
+        
+        <!-- Carrusel / Grid de Sponsors -->
+        <div class="flex flex-wrap items-center justify-center gap-8 md:gap-12 opacity-80">
+          <div class="px-6 py-3 bg-gray-50 rounded-xl border border-crt-border font-mono font-bold text-gray-700">Universidad de Córdoba</div>
+          <div class="px-6 py-3 bg-gray-50 rounded-xl border border-crt-border font-mono font-bold text-gray-700">JBC Soldering</div>
+          <div class="px-6 py-3 bg-gray-50 rounded-xl border border-crt-border font-mono font-bold text-gray-700">Ansys</div>
+          <div class="px-6 py-3 bg-gray-50 rounded-xl border border-crt-border font-mono font-bold text-gray-700">SolidWorks</div>
+          <div class="px-6 py-3 bg-gray-50 rounded-xl border border-crt-border font-mono font-bold text-gray-700">La Madrileña</div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- FOOTER -->
+  <footer class="bg-gray-900 text-gray-300 py-12 border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+        
+        <div class="col-span-1 md:col-span-2">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-8 h-8 rounded-lg bg-crt-green flex items-center justify-center text-white font-black text-sm">CRT</div>
+            <span class="font-black text-white text-lg tracking-wider">CÓRDOBA RACING TEAM</span>
+          </div>
+          <p class="text-sm text-gray-400 max-w-sm">
+            Equipo oficial de Formula Student de la Universidad de Córdoba. Ingeniería, innovación y desarrollo para la competición universitaria internacional.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-3 font-mono">Ubicación</h4>
+          <p class="text-sm text-gray-400">Calle Astrónoma Cecilia Payne, Nave 4.5 - RB21</p>
+          <p class="text-sm text-gray-400">Córdoba, España</p>
+        </div>
+
+        <div>
+          <h4 class="text-white font-semibold text-sm mb-3 font-mono">Enlaces</h4>
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li><a href="join.html" class="hover:text-crt-green transition-colors">Reclutamiento</a></li>
+            <li><a href="#monoplaza" class="hover:text-crt-green transition-colors">Monoplaza</a></li>
+            <li><a href="#sponsors" class="hover:text-crt-green transition-colors">Dossier Patrocinio</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div class="pt-8 border-t border-gray-800 flex flex-col sm:flex-row items-center justify-between text-xs text-gray-500">
+        <p>© 2026 Córdoba Racing Team. Universidad de Córdoba.</p>
+        <p class="font-mono mt-2 sm:mt-0">Semper in novum</p>
+      </div>
+    </div>
+  </footer>
+
   <script>
-    // Inicializar iconos de Lucide
+    // Inicialización de iconos de Lucide
     lucide.createIcons();
   </script>
 </body>
