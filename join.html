@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admisiones | Córdoba Racing Team</title>
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              black: '#111111',
+              dark: '#1c1c1e',
+              muted: '#6e6e73',
+              light: '#f5f5f7',
+              border: '#e5e5ea',
+              green: '#1a8a44',
+              greenHover: '#146c35'
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['Space Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[#fafafa] text-brand-dark font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR (Idéntica a Inicio) -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fafafa]/90 backdrop-blur-md border-b border-brand-border transition-all">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="logo-transparente.png" alt="Logo Córdoba Racing Team" class="h-10 w-auto group-hover:opacity-80 transition-opacity">
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-medium text-brand-muted">
+        <a href="index.html#filosofia" class="hover:text-brand-green transition-colors">Proyecto</a>
+        <a href="index.html#monoplaza" class="hover:text-brand-green transition-colors">Monoplaza</a>
+        <a href="index.html#galeria" class="hover:text-brand-green transition-colors">Galería</a>
+        <a href="index.html#noticias" class="hover:text-brand-green transition-colors">Noticias</a>
+      </nav>
+      <div class="hidden md:flex items-center">
+        <a href="index.html" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-brand-border text-brand-muted text-xs font-bold uppercase tracking-wider hover:bg-brand-light transition-all">
+          <span>Volver a Inicio</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20 flex-grow">
+    
+    <!-- HEADER ADMISIONES -->
+    <section class="max-w-3xl mx-auto px-6 lg:px-12 pt-16 pb-12 sm:pt-24 sm:pb-16 text-center">
+      <p class="text-xs uppercase tracking-[0.25em] text-brand-green font-mono mb-4 font-bold">
+        Temporada 2026/2027
+      </p>
+      <h1 class="text-4xl sm:text-5xl font-light tracking-tight text-brand-black leading-[1.1] mb-6">
+        Únete al <span class="font-serif italic font-normal text-brand-green">equipo</span>
+      </h1>
+      <p class="text-sm sm:text-base text-brand-muted font-light leading-relaxed">
+        Buscamos estudiantes comprometidos, con rigor técnico y capacidad de trabajo bajo presión para desarrollar el próximo monoplaza de combustión. El proceso de selección consta de una evaluación inicial de perfil y una entrevista posterior.
+      </p>
+    </section>
+
+    <!-- FORMULARIO / EVALUACIÓN -->
+    <section class="max-w-4xl mx-auto px-6 lg:px-12 pb-24 sm:pb-32">
+      <div class="bg-white border border-brand-border rounded-2xl shadow-sm p-6 sm:p-10">
+        
+        <div class="mb-8 border-b border-brand-border pb-6">
+          <h2 class="text-lg font-medium text-brand-black mb-2">Cuestionario de Evaluación</h2>
+          <p class="text-xs text-brand-muted font-light">
+            Por favor, completa el siguiente formulario. La sinceridad en tus respuestas es fundamental para valorar tu encaje en los distintos departamentos (Chasis, Aerodinámica, Powertrain, Dinámica o Marketing/Organización).
+          </p>
+        </div>
+
+        <!-- CONTENEDOR GOOGLE FORMS -->
+        <div class="w-full bg-brand-light rounded-xl border border-brand-border h-[600px] flex items-center justify-center relative overflow-hidden">
+          
+          <!-- INSTRUCCIÓN TEMPORAL (Borrar cuando pongas el link del form) -->
+          <div class="text-center p-6 z-10 absolute pointer-events-none">
+            <i data-lucide="clipboard-list" class="w-8 h-8 text-brand-muted mx-auto mb-3"></i>
+            <span class="text-xs font-mono uppercase tracking-widest text-brand-muted block mb-1">Área del Formulario</span>
+            <p class="text-xs text-brand-muted font-light">Sustituye el enlace del iframe por el link de tu Google Forms</p>
+          </div>
+
+          <!-- IFRAME REAL DEL FORMULARIO -->
+          <!-- Sustituye el "src" por el enlace "Insertar HTML" que te da Google Forms al darle a Enviar -->
+          <iframe src="https://forms.gle/i1HpzoHPEtWvTJzD7" width="100%" height="100%" frameborder="0" marginheight="0" marginwidth="0" class="relative z-20 bg-transparent min-h-[800px]">Cargando…</iframe>
+        
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER MINIMALISTA -->
+  <footer class="bg-brand-black text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between">
+      <img src="logo-footer.png" alt="Logo CRT" class="h-10 w-auto mb-4 sm:mb-0 rounded">
+      <div class="text-[11px] font-mono text-gray-500 text-center sm:text-right">
+        <p>© 2026 Córdoba Racing Team.</p>
+        <p class="mt-1 uppercase text-brand-green">Semper in novum</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
