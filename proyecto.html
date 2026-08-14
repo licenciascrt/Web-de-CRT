@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>El Proyecto | Córdoba Racing Team</title>
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: { black: '#111111', dark: '#1c1c1e', muted: '#6e6e73', light: '#f5f5f7', border: '#e5e5ea', green: '#1a8a44' }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+            serif: ['Newsreader', 'serif'],
+            mono: ['Space Mono', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;1,6..72,300&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-[#fafafa] text-brand-dark font-sans antialiased flex flex-col min-h-screen">
+
+  <!-- NAVBAR -->
+  <header class="fixed top-0 left-0 right-0 z-50 bg-[#fafafa]/90 backdrop-blur-md border-b border-brand-border transition-all">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 h-20 flex items-center justify-between">
+      <a href="index.html" class="flex items-center group">
+        <img src="logo-transparente.png" alt="Logo Córdoba Racing Team" class="h-10 w-auto group-hover:opacity-80 transition-opacity">
+      </a>
+      <nav class="hidden md:flex items-center gap-10 text-xs uppercase tracking-widest font-medium text-brand-muted">
+        <a href="proyecto.html" class="text-brand-green transition-colors">Proyecto</a>
+        <a href="index.html#monoplaza" class="hover:text-brand-green transition-colors">Monoplaza</a>
+        <a href="index.html#galeria" class="hover:text-brand-green transition-colors">Galería</a>
+        <a href="news.html" class="hover:text-brand-green transition-colors">Noticias</a>
+      </nav>
+      <div class="hidden md:flex items-center">
+        <a href="join.html" class="inline-flex items-center gap-2 px-6 py-2.5 rounded-full border border-brand-green text-brand-green text-xs font-bold uppercase tracking-wider hover:bg-brand-green hover:text-white transition-all duration-300">
+          <span>Unirse al Equipo</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-32 pb-24 flex-grow">
+    
+    <!-- TÍTULO PRINCIPAL -->
+    <header class="max-w-4xl mx-auto px-6 lg:px-12 mb-16 text-center">
+      <span class="text-xs uppercase tracking-[0.2em] font-mono text-brand-green block mb-4 font-bold">Nuestra Filosofía</span>
+      <h1 class="text-4xl sm:text-5xl font-light tracking-tight text-brand-black leading-[1.15]">
+        Ingeniería, competición e innovación desde la <span class="font-serif italic text-brand-green">Universidad de Córdoba</span>
+      </h1>
+    </header>
+
+    <article class="max-w-5xl mx-auto px-6 lg:px-12">
+      
+      <!-- INTRODUCCIÓN -->
+      <div class="text-lg sm:text-xl text-brand-muted font-light leading-relaxed max-w-3xl mx-auto text-center mb-20">
+        <p class="mb-6">
+          <strong class="text-brand-black font-medium">Córdoba Racing Team (CRT)</strong> es el equipo de competición de la Universidad de Córdoba dedicado al diseño, desarrollo y construcción de monoplazas para Formula Student, una de las competiciones universitarias de ingeniería y automoción más exigentes del mundo.
+        </p>
+        <p>
+          El proyecto nace con un objetivo claro: llevar la formación universitaria más allá de las aulas y convertir los conocimientos adquiridos durante la carrera en tecnología capaz de enfrentarse a un entorno real de competición.
+        </p>
+      </div>
+
+      <!-- BLOQUE 1: Imagen pequeña a la derecha -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20">
+        <div class="md:col-span-8 text-brand-muted font-light leading-relaxed space-y-6">
+          <p>
+            Formula Student reúne cada año a equipos universitarios de todo el mundo. En ella, los estudiantes no se limitan a diseñar un vehículo y ponerlo en pista. Cada equipo debe afrontar prácticamente todas las fases que encontraría un proyecto profesional de ingeniería: desde la concepción y diseño del monoplaza hasta su fabricación, puesta a punto y validación, pasando por la gestión económica, el análisis de costes, la innovación, la planificación del proyecto y la viabilidad empresarial.
+          </p>
+          <p class="text-brand-black text-xl font-serif italic border-l-2 border-brand-green pl-6 py-2 my-8">
+            "El resultado es un entorno de alto rendimiento en el que ingeniería, competición y gestión trabajan conjuntamente."
+          </p>
+          <h2 class="text-2xl text-brand-black font-medium tracking-tight mt-12 mb-4">Mucho más que un coche</h2>
+          <p>
+            Uno de los elementos que hace especialmente diferente a Formula Student es que la competición no se decide únicamente por quién consigue el vehículo más rápido. Los monoplazas son sometidos a diferentes pruebas dinámicas en pista, pero los equipos también deben defender su proyecto ante jueces especializados y demostrar la calidad de sus decisiones técnicas y empresariales.
+          </p>
+        </div>
+        
+        <!-- FOTO CHIQUITA 1 -->
+        <div class="md:col-span-4 mt-8 md:mt-2">
+          <div class="aspect-[4/5] bg-brand-light rounded-xl overflow-hidden border border-brand-border">
+            <!-- Cambia esta imagen -->
+            <img src="foto-proyecto-1.jpg" alt="Defensa ante jueces" class="w-full h-full object-cover">
+          </div>
+          <p class="text-[10px] uppercase tracking-widest text-brand-muted mt-3 font-mono">Defensa de diseño (Static Events)</p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 2: Imagen pequeña a la izquierda -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-16 items-start mb-20">
+        
+        <!-- FOTO CHIQUITA 2 (Aparece primero en código, se ve a la izquierda en PC) -->
+        <div class="md:col-span-4 order-2 md:order-1 mt-8 md:mt-12">
+          <div class="aspect-square bg-brand-light rounded-xl overflow-hidden border border-brand-border">
+            <!-- Cambia esta imagen -->
+            <img src="foto-proyecto-2.jpg" alt="Trabajo en equipo CRT" class="w-full h-full object-cover">
+          </div>
+          <p class="text-[10px] uppercase tracking-widest text-brand-muted mt-3 font-mono">Ensamblaje del Monoplaza</p>
+        </div>
+
+        <div class="md:col-span-8 order-1 md:order-2 text-brand-muted font-light leading-relaxed space-y-6">
+          <p>
+            Diseño, eficiencia, innovación, costes, estrategia y viabilidad forman parte de una misma competición. De esta manera, los estudiantes tienen que aprender a tomar decisiones similares a las que encontrarán posteriormente en la industria: qué desarrollar, cuánto cuesta, cómo fabricarlo, qué recursos necesita y, sobre todo, por qué esa solución es la adecuada.
+          </p>
+          <p>
+            Es precisamente esta combinación la que convierte a Formula Student en una experiencia formativa especialmente cercana al mundo profesional. El estudiante deja de trabajar únicamente sobre problemas teóricos y pasa a enfrentarse a plazos, presupuestos, proveedores, fabricación, pruebas, errores y decisiones reales.
+          </p>
+          
+          <h2 class="text-2xl text-brand-black font-medium tracking-tight mt-12 mb-4">Un proyecto multidisciplinar</h2>
+          <p>
+            Córdoba Racing Team está formado por estudiantes de distintas ramas de conocimiento de la Universidad de Córdoba, que trabajan de manera conjunta en un proyecto común. Aunque el automóvil constituye el elemento visible del equipo, detrás de cada monoplaza existe un trabajo mucho más amplio. Ingeniería, electrónica, programación, fabricación, diseño, comunicación, gestión, organización y desarrollo empresarial convergen dentro de un mismo proyecto.
+          </p>
+          <p class="font-medium text-brand-black">
+            El objetivo no es solamente construir un coche. Es aprender a construir un proyecto.
+          </p>
+        </div>
+      </div>
+
+      <!-- BLOQUE 3: Sin foto, a dos columnas tipo periódico -->
+      <div class="border-t border-brand-border pt-16 mt-16">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 text-brand-muted font-light leading-relaxed">
+          
+          <div>
+            <h2 class="text-2xl text-brand-black font-medium tracking-tight mb-4">Del aula a la pista</h2>
+            <p class="mb-4">
+              El trabajo del equipo combina formación académica con experiencia práctica. Los estudiantes participan directamente en el desarrollo del vehículo, desde las primeras fases de conceptualización hasta las pruebas y validaciones necesarias para llevarlo a competición.
+            </p>
+            <p>
+              Cada decisión tiene consecuencias. Un cambio en el diseño puede afectar al peso; una elección de materiales puede modificar los costes; una solución electrónica puede condicionar el comportamiento del vehículo; y una modificación aparentemente pequeña puede terminar afectando al conjunto del monoplaza. Ese proceso obliga a los integrantes de CRT a trabajar bajo una filosofía muy cercana a la industria del motorsport: diseñar, fabricar, probar, analizar y volver a diseñar.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="text-2xl text-brand-black font-medium tracking-tight mb-4">Representar a Córdoba</h2>
+            <p class="mb-4">
+              Más allá del componente deportivo, Córdoba Racing Team pretende convertirse en una plataforma para fomentar el talento universitario, impulsar la innovación y acercar a los estudiantes a la industria tecnológica y del automóvil.
+            </p>
+            <p class="mb-4">
+              La participación en Formula Student permite además situar a la Universidad de Córdoba dentro de un entorno internacional en el que equipos universitarios de diferentes países comparten conocimientos y compiten.
+            </p>
+            <p class="font-medium text-brand-black">
+              Porque, al final, Córdoba Racing Team no construye únicamente monoplazas. Construye experiencia, conocimiento y talento preparado para competir en el mundo real.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+    </article>
+  </main>
+
+  <footer class="bg-brand-black text-white py-12">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col sm:flex-row items-center justify-between">
+      <img src="logo-footer.png" alt="Logo CRT" class="h-10 w-auto mb-4 sm:mb-0 rounded">
+      <p class="text-[11px] font-mono text-gray-500">© 2026 Córdoba Racing Team. Semper in novum.</p>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>
