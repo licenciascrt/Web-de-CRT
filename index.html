@@ -99,22 +99,82 @@
       </div>
     </section>
 
-    <!-- SECCIÓN INTERACTIVA MONOPLAZA -->
-    <section id="monoplaza" class="border-t border-brand-border py-24 sm:py-32 bg-white">
-      <div class="max-w-7xl mx-auto px-6 lg:px-12">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
-          <div>
-            <span class="text-xs uppercase tracking-[0.2em] font-mono text-brand-muted block mb-2">02 / Ingeniería</span>
-            <h2 class="text-3xl sm:text-4xl font-light tracking-tight text-brand-black">El Monoplaza</h2>
+   <!-- SECCIÓN: EL COCHE / MONOPLAZA -->
+        <section id="el-coche" class="py-24 bg-brand-dark text-white relative overflow-hidden">
+          <div class="max-w-7xl mx-auto px-6 lg:px-12">
+            
+            <!-- Cabecera de la sección -->
+            <div class="text-center max-w-3xl mx-auto mb-16">
+              <span class="text-xs font-mono uppercase tracking-widest text-brand-green block mb-3">Innovación y Rendimiento</span>
+              <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight">Nuestro Monoplaza</h2>
+              <p class="mt-4 text-gray-400 text-sm leading-relaxed">
+                Diseñado bajo estrictos estándares de ingeniería para competir en Formula Student. Cada componente está optimizado aerodinámica y estructuralmente.
+              </p>
+            </div>
+
+            <!-- Contenedor del Render y Puntos de Información -->
+            <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-gray-900 shadow-2xl">
+              
+              <!-- Imagen del Render (Asegúrate de poner el nombre exacto de tu archivo de imagen) -->
+              <img src="ruta-de-tu-render.png" alt="Monoplaza Córdoba Racing Team" class="w-full h-auto object-cover max-h-[600px] opacity-90">
+              
+              <!-- Puntos de Información Interactivos sobre la imagen -->
+              <!-- Punto 1: Aerodinámica / Alerón -->
+              <div class="absolute top-[25%] left-[15%] group cursor-pointer">
+                <span class="relative flex h-4 w-4">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-4 w-4 bg-brand-green"></span>
+                </span>
+                <div class="absolute left-6 top-0 hidden group-hover:block bg-black/90 border border-gray-700 p-3 rounded-lg text-xs w-48 shadow-xl z-10">
+                  <p class="font-bold text-brand-green mb-1">Alerón Delantero</p>
+                  <p class="text-gray-300">Diseñado mediante CFD para maximizar la carga aerodinámica y el paso por curva.</p>
+                </div>
+              </div>
+
+              <!-- Punto 2: Unidad de Potencia / Motor -->
+              <div class="absolute top-[50%] left-[55%] group cursor-pointer">
+                <span class="relative flex h-4 w-4">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-4 w-4 bg-brand-green"></span>
+                </span>
+                <div class="absolute left-6 top-0 hidden group-hover:block bg-black/90 border border-gray-700 p-3 rounded-lg text-xs w-48 shadow-xl z-10">
+                  <p class="font-bold text-brand-green mb-1">Tren de Potencia</p>
+                  <p class="text-gray-300">Configuración optimizada para una entrega de par instantánea y máxima eficiencia.</p>
+                </div>
+              </div>
+
+              <!-- Punto 3: Chasís / Bastidor -->
+              <div class="absolute top-[40%] left-[75%] group cursor-pointer">
+                <span class="relative flex h-4 w-4">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-green opacity-75"></span>
+                  <span class="relative inline-flex rounded-full h-4 w-4 bg-brand-green"></span>
+                </span>
+                <div class="absolute left-6 top-0 hidden group-hover:block bg-black/90 border border-gray-700 p-3 rounded-lg text-xs w-48 shadow-xl z-10">
+                  <p class="font-bold text-brand-green mb-1">Chasis</p>
+                  <p class="text-gray-300">Robusto chasis tubular de acero diseñado para garantizar rigidez y seguridad cumpliendo la normativa FSUK/FS.</p>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Especificaciones Técnicas (Tarjetas inferiores de info) -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-12">
+              <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl">
+                <h4 class="text-xs font-mono uppercase text-brand-green mb-2">Chasis</h4>
+                <p class="text-sm font-semibold">Chasis tubular de acero</p>
+              </div>
+              <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl">
+                <h4 class="text-xs font-mono uppercase text-brand-green mb-2">Aerodinámica</h4>
+                <p class="text-sm font-semibold">Paquete aerodinámico optimizado CFD</p>
+              </div>
+              <div class="bg-gray-900/50 border border-gray-800 p-6 rounded-xl">
+                <h4 class="text-xs font-mono uppercase text-brand-green mb-2">Electrónica</h4>
+                <p class="text-sm font-semibold">Telemetría avanzada y adquisición de datos</p>
+              </div>
+            </div>
+
           </div>
-        </div>
-        <div class="w-full flex justify-center py-4">
-          <div class="relative w-full max-w-5xl rounded-3xl overflow-hidden shadow-2xl bg-[#050505] border border-gray-800">
-            <img src="coche-render.jpg.png" alt="Render Monoplaza CRT" class="w-full h-auto object-cover opacity-95 hover:opacity-100 transition-opacity duration-500">
-          </div>
-        </div>
-      </div>
-    </section>
+        </section>
 
     <!-- SECCIÓN PATROCINADORES -->
     <section class="py-24 bg-[#fafafa] border-t border-brand-border">
